@@ -1,0 +1,57 @@
+length() → Returns the number of characters in the string.
+
+charAt(int index) → Returns character at the given index.
+
+toCharArray() → Converts string into a character array.
+
+equals(Object another) → Compares content of two strings.
+
+equalsIgnoreCase(String another) → Compares strings ignoring case.
+
+compareTo(String another) → Lexicographically compares two strings.
+
+contains(CharSequence s) → Checks if substring exists.
+
+startsWith(String prefix) → Checks if string starts with given prefix.
+
+endsWith(String suffix) → Checks if string ends with given suffix.
+
+indexOf(String str) → Returns index of first occurrence of substring.
+
+lastIndexOf(String str) → Returns index of last occurrence.
+
+substring(int begin, int end) → Extracts part of the string.
+
+subSequence(int begin, int end) → Similar to substring but returns CharSequence.
+
+replace(char oldChar, char newChar) → Replaces all occurrences of a char.
+
+replace(CharSequence target, CharSequence replacement) → Replaces all substrings.
+
+replaceAll(String regex, String replacement) → Replaces substrings using regex.
+
+replaceFirst(String regex, String replacement) → Replaces first match of regex.
+
+trim() → Removes leading and trailing spaces.
+
+strip() → Removes Unicode whitespaces (Java 11+).
+
+stripLeading() → Removes leading whitespaces only.
+
+stripTrailing() → Removes trailing whitespaces only.
+
+toLowerCase() → Converts to lowercase.
+
+toUpperCase() → Converts to uppercase.
+
+split(String regex) → Splits string into array by regex.
+
+join(CharSequence delimiter, CharSequence... elements) → Joins multiple strings with delimiter.
+
+valueOf(Object obj) → Converts object to string.
+
+format(String format, Object... args) → Returns formatted string.
+
+intern() → Stores string in String Pool and returns reference.
+
+matches(String regex) → Checks if string matches regex.
