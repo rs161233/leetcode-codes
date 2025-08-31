@@ -1,0 +1,45 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        String str="Javaj";
+        if(checkPalindrome(str.toLowerCase())){
+        System.out.println("String is Palindrome");
+        }else{
+             System.out.println("String is not Palindrome");
+        }
+    }   
+        
+    public static Boolean checkPalindrome(String str){
+        StringBuilder rev= new StringBuilder();
+        
+         for (int i = str.length() - 1; i >= 0; i--) {
+            rev.append(str.charAt(i));
+        }
+        
+        
+        return str.equals(rev.toString());
+    }
+    
+}
+ /*
+        ✅ Suggestion 1: Use StringBuilder's built-in reverse()
+        return str.equals(new StringBuilder(str).reverse().toString());
+        */
+
+        /*
+        ✅ Suggestion 2: More efficient (O(1) space) - Two pointer approach
+        int left = 0, right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+
+ ✅ Suggestion 3: Handle null and edge cases (empty, single char)
+        if (str == null || str.length() <= 1) return true;
+        */
