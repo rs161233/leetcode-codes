@@ -1,0 +1,24 @@
+class Main {
+    public static void main(String[] args) {
+        String str="Java is funny coding language";
+        String rev=reverse(str);
+        System.out.println(rev);
+    }   
+        
+    public static String reverse(String str){
+        String rev="";
+        
+         for(int i=0; i<str.length();i++){
+            rev=str.charAt(i)+rev;
+        }
+        return rev;
+    }
+    // public static String reverse(String str){
+    //     StringBuilder rev= new StringBuilder();
+        
+    //      for (int i = str.length() - 1; i >= 0; i--) {
+    //         rev.append(str.charAt(i));
+    //     }
+    //     return rev.toString();
+    // }
+}
