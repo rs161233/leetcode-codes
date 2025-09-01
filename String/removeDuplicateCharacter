@@ -1,0 +1,54 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        String str = "azbcdcbefsdfdd";
+
+        System.out.println("removeDuplicateCharacter (Set) :" + removeDuplicateCharacter(str.toLowerCase()));
+        System.out.println("removeDuplicateCharacterManual :" + removeDuplicateCharacterManual(str.toLowerCase()));
+        System.out.println("removeDuplicateCharacterOptimized :" + removeDuplicateCharacterOptimized(str.toLowerCase()));
+    }
+
+    // ✅ Your original version with LinkedHashSet
+    public static Set removeDuplicateCharacter(String str) {
+        Set<Character> set = new LinkedHashSet<>();
+        for (char c : str.toCharArray()) {
+            set.add(c);
+        }
+        return set;
+    }
+
+    // ✅ Your original manual version (O(n^2))
+    public static String removeDuplicateCharacterManual(String str) {
+        StringBuilder sb = new StringBuilder();
+        int count;
+        for (int i = 0; i < str.length(); i++) {
+            count = 0;
+            for (int j = i + 1; j < str.length(); j++) {
+                if (str.charAt(i) == str.charAt(j)) {
+                    count++;
+                }
+            }
+            if (count == 0) {
+                sb.append(str.charAt(i));
+            }
+        }
+        return sb.toString();
+    }
+
+    // ✅ Suggested optimized version (O(n))
+    public static String removeDuplicateCharacterOptimized(String str) {
+        StringBuilder sb = new StringBuilder();
+        Set<Character> seen = new HashSet<>(); // track visited chars
+
+        for (char c : str.toCharArray()) {
+            if (!seen.contains(c)) {
+                sb.append(c);
+                seen.add(c);
+            }
+        }
+        return sb.toString();
+    }
+}
